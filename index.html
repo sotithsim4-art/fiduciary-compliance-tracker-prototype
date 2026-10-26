@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiduciary Compliance Tracker (Prototype)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%232e7d9a%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-weight=%27bold%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27%3EFC%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="banner" role="note">Prototype with example data, not an official tool. Not legal advice.</div>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><span class="logo">FC</span><div><b>Fiduciary Compliance Tracker</b><small>Prototype</small></div></div>
+    <nav id="nav">
+      <a href="#dashboard" data-v="dashboard">Dashboard</a>
+      <a href="#obligations" data-v="obligations">Obligations</a>
+      <a href="#controls" data-v="controls">Control Map</a>
+      <a href="#calendar" data-v="calendar">Reporting Calendar</a>
+      <a href="#evidence" data-v="evidence">Evidence Register</a>
+      <a href="#issues" data-v="issues">Issues Log</a>
+      <a href="#report" data-v="report">Summary Report</a>
+      <a href="#about" data-v="about">About</a>
+    </nav>
+    <div class="side-foot">
+      <button class="btn ghost" data-act="reset">Reset sample data</button>
+      <small>Data is stored only in this browser (localStorage).</small>
+    </div>
+  </aside>
+  <main id="view" tabindex="-1"></main>
+</div>
+<div id="modal" class="modal" hidden></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
