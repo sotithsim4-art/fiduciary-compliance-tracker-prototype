@@ -234,6 +234,7 @@
       [["Next 30 days", 30], ["Next 60 days", 60], ["Next 90 days", 90]].map(function (w) { var n = fut.filter(function (i) { return i.days <= w[1]; }).length; return '<div class="card stat brand"><div class="n">' + n + '</div><div class="l">Deadlines due in the ' + w[0].toLowerCase() + "</div></div>"; }).join("") +
       '<div class="card stat bad"><div class="n">' + overdueItems.length + '</div><div class="l">Past-due items (obligations, filings, issues)</div></div></div>';
     h += '<div class="grid g2" style="margin-top:14px"><div class="card"><h2>Obligations by status</h2>' + donut(c) + '</div><div class="card"><h2>Open deadlines by window (separate buckets)</h2>' + bucketBars(b) + "</div></div>";
+    h += '<div class="card quick" style="margin-top:14px"><h2>Quick links</h2><ul class="links"><li><a href="https://sotithsim4-art.github.io/" target="_blank" rel="noopener noreferrer">Sotith\'s portfolio</a> <span class="muted small">(opens in a new tab)</span></li></ul></div>';
     h += '<div class="card" style="margin-top:14px"><h2>Status by regulation</h2><div style="max-width:620px">' + barsByReg() + '</div>' + "</div>";
     h += '<div class="card" style="margin-top:14px"><h2>Next deadlines and past-due items</h2>';
     var list = overdueItems.slice(-4).concat(fut.slice(0, 8));
